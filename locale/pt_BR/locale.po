@@ -1,0 +1,5 @@
+msgid "plugins.generic.userRolesExpiration.displayName"
+msgstr "Expiração de Papéis de Usuários"
+
+msgid "plugins.generic.userRolesExpiration.description"
+msgstr "Permite expirar o papel de todos os usuários que o possuam dentro de uma determinada revista"

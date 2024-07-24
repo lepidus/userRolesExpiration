@@ -1,0 +1,5 @@
+msgid "plugins.generic.userRolesExpiration.displayName"
+msgstr "User Roles Expiration"
+
+msgid "plugins.generic.userRolesExpiration.description"
+msgstr "Allows to expire the role of all users who have it within a certain journal"

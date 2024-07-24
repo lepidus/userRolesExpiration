@@ -1,0 +1,5 @@
+msgid "plugins.generic.userRolesExpiration.displayName"
+msgstr "Expiración de Roles de Usuario"
+
+msgid "plugins.generic.userRolesExpiration.description"
+msgstr "Permite que caduque el rol de todos los usuarios que lo tienen en una revista determinada"
