@@ -2,4 +2,16 @@ msgid "plugins.generic.userRolesExpiration.displayName"
 msgstr "Expiración de Roles de Usuario"
 
 msgid "plugins.generic.userRolesExpiration.description"
-msgstr "Permite que caduque el rol de todos los usuarios que lo tienen en una revista determinada"
+msgstr "Permite que expire el rol de todos los usuarios que lo tienen en una revista determinada"
+
+msgid "plugins.generic.userRolesExpiration.expireRole.title"
+msgstr "Expirar role"
+
+msgid "plugins.generic.userRolesExpiration.expireRole.description"
+msgstr "Seleccione el rol de usuario que desea que expire en esta revista"
+
+msgid "plugins.generic.userRolesExpiration.expireRole.forbidden"
+msgstr "¡Sólo el administrador del sitio puede utilizar esta acción!"
+
+msgid "plugins.generic.userRolesExpiration.expire"
+msgstr "Expirar"
