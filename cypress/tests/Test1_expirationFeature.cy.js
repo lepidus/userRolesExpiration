@@ -21,4 +21,17 @@ describe('User Roles Expiration - Expiration feature', function () {
         cy.contains('a', 'Expire role').click();
         cy.contains('Please select which user role you wish to expire on this journal');
 	});
+    it('Reviewer user registers herself in another journal', function () {
+        cy.login('jjanssen', null, 'publicknowledge');
+        cy.get('.app__headerActions button').eq(1).click();
+        cy.contains('a', 'Edit Profile').click();
+        
+        cy.get('.ui-tabs-anchor:contains("Roles")').click();
+        cy.contains('span', 'Register with other journals').parent().click();
+        cy.contains('label', 'Brazilian Journal of Cosmethics').parent().within(() => {
+            cy.get('input[name^=reviewerGroup]').check();
+        });
+
+        cy.contains('button', 'Save').click();
+    });
 });
