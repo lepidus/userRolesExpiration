@@ -29,5 +29,9 @@ describe('User Roles Expiration - Plugin configuration', function () {
 		cy.get('.pkp_modal_panel button:contains("Save")').click();
 
 		cy.get('.pkpFormPage__status:contains("Saving")', {timeout:25000}).should('not.exist');
+
+		cy.contains('a', 'Hosted Journals').click();
+		cy.contains('span', 'Brazilian Journal of Cosmethics');
+		cy.contains('span', 'rbcosme');
 	});
 });
