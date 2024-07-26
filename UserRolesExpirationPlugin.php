@@ -86,7 +86,7 @@ class UserRolesExpirationPlugin extends GenericPlugin
 
                 return new JSONMessage(true, $form->fetch($request));
             default:
-                return parent::manage($verb, $args, $message, $messageParams);
+                return parent::manage($args, $request);
         }
     }
 }

@@ -13,5 +13,8 @@ msgstr "Please select which user role you wish to expire on this journal"
 msgid "plugins.generic.userRolesExpiration.expireRole.forbidden"
 msgstr "Only the site administrator can use this feature!"
 
+msgid "plugins.generic.userRolesExpiration.selectRole"
+msgstr "Select role"
+
 msgid "plugins.generic.userRolesExpiration.expire"
 msgstr "Expire"

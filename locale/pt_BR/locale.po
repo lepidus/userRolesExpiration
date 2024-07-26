@@ -13,5 +13,8 @@ msgstr "Por favor, selecione qual papel de usuário você deseja expirar nesta r
 msgid "plugins.generic.userRolesExpiration.expireRole.forbidden"
 msgstr "Apenas o(a) administrador(a) do site pode utilizar esta ação!"
 
+msgid "plugins.generic.userRolesExpiration.selectRole"
+msgstr "Selecionar papel"
+
 msgid "plugins.generic.userRolesExpiration.expire"
 msgstr "Expirar"
