@@ -3,9 +3,11 @@
 namespace APP\plugins\generic\userRolesExpiration\form;
 
 use PKP\form\Form;
+use APP\core\Application;
 use APP\template\TemplateManager;
 use APP\facades\Repo;
 use PKP\security\Validation;
+use APP\plugins\generic\userRolesExpiration\classes\RoleExpirationDAO;
 
 class RoleExpirationForm extends Form
 {
@@ -51,8 +53,21 @@ class RoleExpirationForm extends Form
         $this->readUserVars(['roleSelected']);
     }
 
+    public function validate($callHooks = true)
+    {
+        $context = Application::get()->getRequest()->getContext();
+        $selectedRoleId = $this->getData('roleSelected');
+        $contextUserGroupsIds = array_keys($this->getContextUserGroups($context));
+
+        return in_array($selectedRoleId, $contextUserGroupsIds);
+    }
+
     public function execute(...$functionArgs)
     {
-        error_log('ai oh ' . $this->getData('roleSelected'));
+        $user = Application::get()->getRequest()->getUser();
+        $selectedRoleId = $this->getData('roleSelected');
+
+        $roleExpirationDao = new RoleExpirationDAO();
+        $roleExpirationDao->expireRole($selectedRoleId, $user->getId());
     }
 }
