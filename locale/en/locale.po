@@ -3,3 +3,18 @@ msgstr "User Roles Expiration"
 
 msgid "plugins.generic.userRolesExpiration.description"
 msgstr "Allows to expire the role of all users who have it within a certain journal"
+
+msgid "plugins.generic.userRolesExpiration.expireRole.title"
+msgstr "Expire role"
+
+msgid "plugins.generic.userRolesExpiration.expireRole.description"
+msgstr "Please select which user role you wish to expire on this journal"
+
+msgid "plugins.generic.userRolesExpiration.expireRole.forbidden"
+msgstr "Only the site administrator can use this feature!"
+
+msgid "plugins.generic.userRolesExpiration.selectRole"
+msgstr "Select role"
+
+msgid "plugins.generic.userRolesExpiration.expire"
+msgstr "Expire"

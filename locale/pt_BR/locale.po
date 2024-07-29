@@ -3,3 +3,18 @@ msgstr "Expiração de Papéis de Usuários"
 
 msgid "plugins.generic.userRolesExpiration.description"
 msgstr "Permite expirar o papel de todos os usuários que o possuam dentro de uma determinada revista"
+
+msgid "plugins.generic.userRolesExpiration.expireRole.title"
+msgstr "Expirar papel"
+
+msgid "plugins.generic.userRolesExpiration.expireRole.description"
+msgstr "Por favor, selecione qual papel de usuário você deseja expirar nesta revista"
+
+msgid "plugins.generic.userRolesExpiration.expireRole.forbidden"
+msgstr "Apenas o(a) administrador(a) do site pode utilizar esta ação!"
+
+msgid "plugins.generic.userRolesExpiration.selectRole"
+msgstr "Selecionar papel"
+
+msgid "plugins.generic.userRolesExpiration.expire"
+msgstr "Expirar"

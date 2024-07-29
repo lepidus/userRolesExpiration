@@ -13,6 +13,6 @@
 <version>
 	<application>userRolesExpiration</application>
 	<type>plugins.generic</type>
-	<release>0.0.0.0</release>
-	<date>2024-07-24</date>
+	<release>0.0.0.1</release>
+	<date>2024-07-29</date>
 </version>
