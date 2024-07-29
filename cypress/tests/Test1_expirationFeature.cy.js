@@ -72,4 +72,32 @@ describe('User Roles Expiration - Expiration feature', function () {
             cy.get('input[name^=reviewerGroup]').should('be.checked');
         });
     });
+    it('Role expiration does not affect executor user', function () {
+        cy.login('admin', 'admin', 'publicknowledge');
+        cy.get('.app__headerActions button').eq(1).click();
+        cy.contains('a', 'Edit Profile').click();
+        cy.get('.ui-tabs-anchor:contains("Roles")').click();
+        cy.contains('label', 'Reviewer').within(() => {
+            cy.get('input[name^=reviewerGroup]').check();
+        });
+        cy.contains('button', 'Save').click();
+
+        cy.contains('a', 'Website').click();
+		cy.waitJQuery();
+		cy.get('#plugins-button').click();
+        cy.contains('span', 'User Roles Expiration').parent().parent().within(() => {
+            cy.get('.show_extras').click();
+        });
+        cy.contains('a', 'Expire role').click();
+        cy.get('select[name="roleSelected"]').select('Reviewer');
+        cy.contains('button', 'Expire').click();
+        cy.wait(2000);
+
+        cy.get('.app__headerActions button').eq(1).click();
+        cy.contains('a', 'Edit Profile').click();
+        cy.get('.ui-tabs-anchor:contains("Roles")').click();
+        cy.contains('label', 'Reviewer').within(() => {
+            cy.get('input[name^=reviewerGroup]').should('be.checked');
+        });
+    });
 });
