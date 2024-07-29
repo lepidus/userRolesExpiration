@@ -20,9 +20,6 @@ class UserRolesExpirationPlugin extends GenericPlugin
             return $success;
         }
 
-        // if ($success && $this->getEnabled($mainContextId)) {
-        // }
-
         return $success;
     }
 
@@ -54,11 +51,11 @@ class UserRolesExpirationPlugin extends GenericPlugin
                     null,
                     'manage',
                     null,
-                    array(
+                    [
                         'verb' => 'expireRole',
                         'plugin' => $this->getName(),
                         'category' => 'generic'
-                    )
+                    ]
                 ),
                 $this->getDisplayName()
             ),

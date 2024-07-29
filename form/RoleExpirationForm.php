@@ -55,6 +55,10 @@ class RoleExpirationForm extends Form
 
     public function validate($callHooks = true)
     {
+        if(!Validation::isSiteAdmin()) {
+            return false;
+        }
+
         $context = Application::get()->getRequest()->getContext();
         $selectedRoleId = $this->getData('roleSelected');
         $contextUserGroupsIds = array_keys($this->getContextUserGroups($context));
